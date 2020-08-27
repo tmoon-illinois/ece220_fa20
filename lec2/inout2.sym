@@ -1,0 +1,16 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	LOOP              3001
+//	PROMPT            3003
+//	POLL_IN           3008
+//	POLL_OUT          300E
+//	TERM              3012
+//	DSRAddr           3013
+//	DDRAddr           3014
+//	KBSRAddr          3015
+//	KBDRAddr          3016
+//	MyStr             3017
+//	NegCR             3021
+

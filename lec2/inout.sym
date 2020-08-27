@@ -1,0 +1,11 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	POLL_IN           3000
+//	POLL_OUT          3003
+//	DSRAddr           3007
+//	DDRAddr           3008
+//	KBSRAddr          3009
+//	KBDRAddr          300A
+
