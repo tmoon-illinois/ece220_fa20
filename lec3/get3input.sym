@@ -1,0 +1,10 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	AGAIN             3003
+//	ASCII             300C
+//	COUNT             300D
+//	SaveR7            300E
+//	Binary            300F
+

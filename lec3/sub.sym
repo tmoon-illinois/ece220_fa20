@@ -1,0 +1,12 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	NEG               3004
+//	SUBT              3007
+//	Value1            3011
+//	Value2            3012
+//	SaveR0_SUB        3013
+//	SaveR6_SUB        3014
+//	SaveR7_SUB        3015
+
