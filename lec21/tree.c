@@ -54,11 +54,12 @@ int main(){
 
     int array[10] = {1, 2, 3,4 ,5,6,7,8,9,10};
 
+    /*
     int i;
     for(i=0;i<10;i++){
         root = InsertNode(root, array[i]);
     }
-    /*
+*/
     root = InsertNode(root, 8);
     root = InsertNode(root, 3);
     root = InsertNode(root, 10);
@@ -67,7 +68,6 @@ int main(){
     root = InsertNode(root, 9);
     root = InsertNode(root, 7);
     root = InsertNode(root, 2);
-*/
     printTree(root, 0);
 
     printf("preorder: ");
@@ -92,6 +92,10 @@ int main(){
     printf("Min node is %d\n", temp->data);
     temp = FindMax(root);
     printf("Max node is %d\n", temp->data);
+
+    printf("Height of the tree is %d\n", getHeight(root));
+
+    DeleteTree(root);
 
 }
 
@@ -174,10 +178,10 @@ void DeleteTree(t_node *node)
         return;
     // Recursive case
     else{
-        DeleteTree(node->left);
-        DeleteTree(node->right);
         printf("Free node of %d\n ", node->data);
         free(node);
+        DeleteTree(node->left);
+        DeleteTree(node->right);
     }
 }
 t_node* NewNode(int data)
