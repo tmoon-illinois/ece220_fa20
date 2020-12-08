@@ -18,9 +18,15 @@ int countNegatives(struct node* root)
 int isSameTree(struct node *root1, struct node *root2)
 {
     // both trees are empty
+    if(root1 == NULL && root2 == NULL)
+        return 1;
+
     // both trees are not empty
+    else if(root1 != NULL && root2 != NULL)
+        return (root1->data == root2->data) && isSameTree(root1->left, root2->left) &&  isSameTree(root1->right, root2->right); 
     // one tree is empty, the other one is not
-    return 0;
+    else
+        return 0;
 }
 
 void mirror(struct node* root)
@@ -28,10 +34,16 @@ void mirror(struct node* root)
     if(root == NULL) return;
 
     // recursive for left subtree
-    // recursive for left subtree
+    mirror(root->left);
+    // recursive for right subtree
+    mirror(root->right);
 
     // swap the left subtree and the right subtree 
     // for the current node
+    struct node * temp;
+    temp = root->left;
+    root->left = root->right;
+    root->right = temp;
 }
 
 

@@ -23,29 +23,31 @@ int main()
     root->right->left->right = NewNode(6);
 
     struct node *root2 = NewNode(2);
-    root2->left = NewNode(-5);
-    root2->right = NewNode(-9);
+    root2->left = NewNode(5);
+    root2->right = NewNode(9);
 
     root2->left->left = NewNode(-4);
     root2->left->right = NewNode(18);
 
-    root2->right->left = NewNode(9);
+    root2->right->left = NewNode(-9);
     root2->right->right = NewNode(-11);
 
     root2->right->left->right = NewNode(6);
 
 
     printTree(root,0);
+    printTree(root2,0);
+    printf("is same tree? %d\n", isSameTree(root, root2));
 
     // call the function 
     negatives = countNegatives(root);
     // print number of negative values
     printf("The number of negative values stored in the tree %d.\n", negatives);
-/*
+    
+    
     mirror(root);
     printTree(root,0);
 
-*/
     return 0;   
 }
 
